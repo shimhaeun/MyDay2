@@ -1,4 +1,4 @@
-package org.ict.movierank.retrofit_test;
+package org.ict.myday.retrofit_test;
 
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;

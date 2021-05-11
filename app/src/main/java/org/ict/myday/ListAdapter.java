@@ -9,13 +9,15 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import org.ict.myday.retrofit_test.DailyBoxOffice;
+
 import java.util.List;
 
 public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> {
 
-    private List<ListFragment> items;
+    private List<DailyBoxOffice> items;
 
-    public ListAdapter(List<ListFragment> items) { this.items = items; }
+    public ListAdapter(List<DailyBoxOffice> items) { this.items = items; }
 
     @NonNull
     @Override
@@ -26,7 +28,7 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        ListFragment item = items.get(position);
+        DailyBoxOffice item = items.get(position);
         holder.setItem(item);
     }
 
@@ -44,6 +46,11 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> {
             thumbnail = itemView.findViewById(R.id.thumbnail);
             title = itemView.findViewById(R.id.title);
             content = itemView.findViewById(R.id.content);
+        }
+        public void setItem(DailyBoxOffice item){
+            //thumbnail.setImageDrawable(item.get);
+            title.setText(item.getRank());
+            content.setText(item.getMovieNm());
         }
 
 
