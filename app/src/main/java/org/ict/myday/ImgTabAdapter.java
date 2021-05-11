@@ -53,7 +53,7 @@ public class ImgTabAdapter extends RecyclerView.Adapter<ImgTabAdapter.ViewHolder
         }
 
         public void setItem(){
-            imgZone.setImageResource();
+//            imgZone.setImageResource();
         }
     }
 }
